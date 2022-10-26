@@ -22,3 +22,22 @@ if (randomNumber > 0.66) {        // if randomNumber > 0.66
   return computerSelection;       //   return computerSelection
 }
 }
+
+// make function playRound
+// set playerSelection to lower case
+// set computerSelection to lower case
+// test condition for truthy-ness
+// condition playerSelection same as computerSelection
+//   return string saying it's a tie
+// condition player rock computer paper
+//   return string saying you lose
+// condition player rock computer scissors
+//   return string saying you win
+// condition player paper computer rock
+//   return string saying you win
+// condition player paper computer scissors
+//   return string saying you lose
+// condition player scissors computer rock
+//   return string saying you lose
+// condition player scissors computer paper
+//   return string saying you win
