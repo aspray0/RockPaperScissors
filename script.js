@@ -12,25 +12,28 @@ let randomNumber = Math.random();
 let computerSelection = '';
 
 if (randomNumber > 0.66) {        // if randomNumber > 0.66
-  computerSelection = 'Rock';     //   put 'Rock' in computerSelection
+  computerSelection = 'rock';     //   put 'Rock' in computerSelection
   return computerSelection;       //   return computerSelection
 } else if (randomNumber > 0.33) { // else if randomNumber > 0.33
-  computerSelection = 'Paper';    //   put 'Paper' in computerSelection
+  computerSelection = 'paper';    //   put 'Paper' in computerSelection
   return computerSelection;       //   return computerSelection
 } else {                          // else
-  computerSelection = 'Scissors'; //   put 'Scissors' in computerSelection
+  computerSelection = 'scissors'; //   put 'Scissors' in computerSelection
   return computerSelection;       //   return computerSelection
 }
 }
+
+// make getPlayerChoice function
+// ask for rock, paper, scissors
+// store answer in playerSelection
+// convert playerSelection to lowercase
+// if playerSelection does not equal rock, paper, or scissors
+//  say 'please choose either rock, paper, or scissors' to console
+// else
+//  return playerSelection
 
 // make function playRound
 function playRound(playerSelection, computerSelection) {
-
-// set playerSelection to lower case
-playerSelection = playerSelection.toLowerCase();
-
-// set computerSelection to lower case
-computerSelection = computerSelection.toLowerCase();
 
 switch (true) {// switch test condition for truthy-ness
   case (playerSelection === computerSelection):// condition playerSelection same as computerSelection
