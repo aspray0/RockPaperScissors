@@ -92,26 +92,33 @@ switch (true) { // switch test condition for truthy-ness
 }
 
 
-// make game function
-// declare playerScore @ 0
-// declare computerScore @ 0
-// declare scoreString
+function game() {  // make game function
 
-// for five iterations
-// retrieve result from playRound w/ getPlayerChoice and getComputerChoice parameters
+  let playerScore = 0;  // declare playerScore @ 0
+  let computerScore = 0;  // declare computerScore @ 0
+  let scoreString = `Player ${playerScore} : Computer ${computerScore}`;// declare scoreString
 
-//  if result is win
-//    increment playerScore
-//    log scoreString
-//  else if result is lose
-//    increment computerScore
-//    log scoreString
-//  else result is tie
-//    log scoreString
+  for (let i = 0; i < 5; i++) { // for five iterations
 
-// if computerScore is greater than playerScore
-//  declare computer the winner
-// else if playerScore is greater than computerScore
-//  declare player the winner
-// else playerScore is even with computerScore
-//  declare a draw
+    // retrieve result from playRound w/ getPlayerChoice and getComputerChoice parameters
+    result = playRound(getPlayerChoice(), getComputerChoice());
+
+    if (result === 'win') {  //  if result is win
+      playerScore++;   //    increment playerScore
+      console.log(scoreString);  //    log scoreString
+    } else if (result === 'lose') {  //  else if result is lose
+      computerScore++;  //    increment computerScore
+      console.log(scoreString);  //    log scoreString
+    } else {    //  else result is tie
+      console.log(scoreString);  //    log scoreString
+    }
+  }
+
+  if (computerScore > playerScore) {  // if computerScore is greater than playerScore
+    console.log(`${scoreString}. The computer wins!`)  //  declare computer the winner
+  } else if (playerScore > computerScore) {  // else if playerScore is greater than computerScore
+    console.log(`${scoreString}. The player wins!`)//  declare player the winner
+  } else {  // else playerScore is even with computerScore
+    console.log(`${scoreString}. It's a draw.`)  //  declare a draw
+}
+}
