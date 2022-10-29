@@ -96,7 +96,7 @@ function game() {  // make game function
 
   let playerScore = 0;  // declare playerScore @ 0
   let computerScore = 0;  // declare computerScore @ 0
-  let scoreString = `Player ${playerScore} : Computer ${computerScore}`;// declare scoreString
+  let scoreString = ``;// declare scoreString
 
   for (let i = 0; i < 5; i++) { // for five iterations
 
@@ -105,20 +105,23 @@ function game() {  // make game function
 
     if (result === 'win') {  //  if result is win
       playerScore++;   //    increment playerScore
+      scoreString = `Player ${playerScore} : Computer ${computerScore}` //  assign scoreString
       console.log(scoreString);  //    log scoreString
     } else if (result === 'lose') {  //  else if result is lose
       computerScore++;  //    increment computerScore
+      scoreString = `Player ${playerScore} : Computer ${computerScore}` //  assign scoreString
       console.log(scoreString);  //    log scoreString
     } else {    //  else result is tie
+      scoreString = `Player ${playerScore} : Computer ${computerScore}` //  assign scoreString
       console.log(scoreString);  //    log scoreString
     }
   }
 
   if (computerScore > playerScore) {  // if computerScore is greater than playerScore
-    console.log(`${scoreString}. The computer wins!`)  //  declare computer the winner
+    console.log(`The computer wins!`)  //  declare computer the winner
   } else if (playerScore > computerScore) {  // else if playerScore is greater than computerScore
-    console.log(`${scoreString}. The player wins!`)//  declare player the winner
+    console.log(`The player wins!`)//  declare player the winner
   } else {  // else playerScore is even with computerScore
-    console.log(`${scoreString}. It's a draw.`)  //  declare a draw
+    console.log(`It's a draw.`)  //  declare a draw
 }
 }
