@@ -92,3 +92,26 @@ switch (true) { // switch test condition for truthy-ness
 }
 
 
+// make game function
+// declare playerScore @ 0
+// declare computerScore @ 0
+// declare scoreString
+
+// for five iterations
+// retrieve result from playRound w/ getPlayerChoice and getComputerChoice parameters
+
+//  if result is win
+//    increment playerScore
+//    log scoreString
+//  else if result is lose
+//    increment computerScore
+//    log scoreString
+//  else result is tie
+//    log scoreString
+
+// if computerScore is greater than playerScore
+//  declare computer the winner
+// else if playerScore is greater than computerScore
+//  declare player the winner
+// else playerScore is even with computerScore
+//  declare a draw
