@@ -50,44 +50,44 @@ if ((playerSelection !== 'rock') && (playerSelection !== 'paper') && (playerSele
 // make function playRound
 function playRound(playerSelection, computerSelection) {
 
-// declare result variable
+let result = '';  // declare result variable
 
-switch (true) {// switch test condition for truthy-ness
-  case (playerSelection === computerSelection):// condition playerSelection same as computerSelection
-    return `It's a tie, ${playerSelection} versus ${computerSelection}!`;//   log string saying it's a tie
-    // result is tie
-    // return result
-    break;//   break
-  case (playerSelection === 'rock' && computerSelection === 'paper'):// condition player rock computer paper
-    return `You lose, ${computerSelection} beats ${playerSelection}!`;//   log string saying you lose
-    // result is lose
-    // return result
-    break;//   break
-  case (playerSelection === 'rock' && computerSelection === 'scissors'):// condition player rock computer scissors
-    return `You win, ${playerSelection} beats ${computerSelection}!`; //   log string saying you win
-    // result is win
-    // return result
-    break;//   break
-  case (playerSelection === 'paper' && computerSelection === 'rock'):// condition player paper computer rock
-    return `You win, ${playerSelection} beats ${computerSelection}!`;//   log string saying you win
-    // result is win
-    // return result
-    break;//   break
-  case (playerSelection === 'paper' && computerSelection === 'scissors'):// condition player paper computer scissors
-    return `You lose, ${computerSelection} beats ${playerSelection}!`;//   log string saying you lose
-    // result is lose
-    // return result
-    break;//   break
-  case (playerSelection === 'scissors' && computerSelection === 'rock'):// condition player scissors computer rock
-    return `You lose, ${computerSelection} beats ${playerSelection}!`;//   log string saying you lose
-    // result is lose
-    // return result
-    break;//   break
-  case (playerSelection === 'scissors' && computerSelection === 'paper'):// condition player scissors computer paper
-    return `You win, ${playerSelection} beats ${computerSelection}!`;//   log string saying you win
-    // result is win
-    // return result
-    break;//   break
+switch (true) { // switch test condition for truthy-ness
+  case (playerSelection === computerSelection): // condition playerSelection same as computerSelection
+    console.log(`It's a tie, ${playerSelection} versus ${computerSelection}!`); //   log string saying it's a tie
+    result = 'tie'; // result is tie
+    return result; // return result
+    break;  //   break
+  case (playerSelection === 'rock' && computerSelection === 'paper'): // condition player rock computer paper
+    console.log(`You lose, ${computerSelection} beats ${playerSelection}!`);  //   log string saying you lose
+    result = 'lose';  // result is lose
+    return result;  // return result
+    break;  //   break
+  case (playerSelection === 'rock' && computerSelection === 'scissors'):  // condition player rock computer scissors
+    console.log(`You win, ${playerSelection} beats ${computerSelection}!`); //   log string saying you win
+    result = 'win'; // result is win
+    return result;  // return result
+    break;  //   break
+  case (playerSelection === 'paper' && computerSelection === 'rock'): // condition player paper computer rock
+    console.log(`You win, ${playerSelection} beats ${computerSelection}!`); //   log string saying you win
+    result = 'win'; // result is win
+    return result;  // return result
+    break;  //   break
+  case (playerSelection === 'paper' && computerSelection === 'scissors'): // condition player paper computer scissors
+    console.log(`You lose, ${computerSelection} beats ${playerSelection}!`);  //   log string saying you lose
+    result = 'lose';  // result is lose
+    return result;  // return result
+    break;  //   break
+  case (playerSelection === 'scissors' && computerSelection === 'rock'):  // condition player scissors computer rock
+    console.log(`You lose, ${computerSelection} beats ${playerSelection}!`);  //   log string saying you lose
+    result = 'lose';  // result is lose
+    return result;  // return result
+    break;  //   break
+  case (playerSelection === 'scissors' && computerSelection === 'paper'): // condition player scissors computer paper
+    console.log(`You win, ${playerSelection} beats ${computerSelection}!`); //   log string saying you win
+    result = 'win'; // result is win
+    return result;  // return result
+    break;  //   break
 }
 }
 
