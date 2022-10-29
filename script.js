@@ -24,13 +24,25 @@ if (randomNumber > 0.66) {        // if randomNumber > 0.66
 }
 
 // make getPlayerChoice function
+function getPlayerChoice() {
+
 // ask for rock, paper, scissors
 // store answer in playerSelection
+let playerSelection = prompt('Rock, paper, or scissors?', '');
+
 // convert playerSelection to lowercase
+playerSelection = playerSelection.toLowerCase();
+
 // if playerSelection does not equal rock, paper, or scissors
-//  say 'please choose either rock, paper, or scissors' to console
-// else
-//  return playerSelection
+if ((playerSelection !== 'rock') && (playerSelection !== 'paper') && (playerSelection !== 'scissors')) {
+
+  //  say 'please choose either rock, paper, or scissors' to console
+  console.log('Please choose either rock, paper, or scissors.');
+
+} else {  // else
+  return playerSelection;  //  return playerSelection
+}
+}
 
 // make function playRound
 function playRound(playerSelection, computerSelection) {
