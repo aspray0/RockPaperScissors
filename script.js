@@ -98,7 +98,7 @@ function game() {  // make game function
   let computerScore = 0;  // declare computerScore @ 0
   let scoreString = ``;// declare scoreString
 
-  for (let i = 0; i < 5; i++) { // for five iterations
+  // for (let i = 0; i < 5; i++) { // for five iterations
 
     // retrieve result from playRound w/ getPlayerChoice and getComputerChoice parameters
     result = playRound(getPlayerChoice(), getComputerChoice());
