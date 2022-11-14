@@ -72,28 +72,58 @@ function playRound(playerSelection, computerSelection) {
 
 
 function getScore() {  // make getScore function
-  
+
   let scoreString = ``;// declare scoreString
 
   if (result === 'win') {  //  if result is win
     playerScore++;   //    increment playerScore
     scoreString = `Player ${playerScore} : Computer ${computerScore}` //  assign scoreString
-    console.log(scoreString);  //    return scoreString
+    return scoreString;  //    return scoreString
   } else if (result === 'lose') {  //  else if result is lose
     computerScore++;  //    increment computerScore
     scoreString = `Player ${playerScore} : Computer ${computerScore}` //  assign scoreString
-    console.log(scoreString);  //    return scoreString
+    return scoreString;  //    return scoreString
   } else {    //  else result is tie
     scoreString = `Player ${playerScore} : Computer ${computerScore}` //  assign scoreString
-    console.log(scoreString);  //    return scoreString
+    return scoreString;  //    return scoreString
   }
 }
 
-// make getWinner function
-  if (computerScore > playerScore) {  // if computerScore is 5
-    console.log(`The computer wins!`)  //  declare computer the winner
-  } else if (playerScore > computerScore) {  // else if playerScore is 5
-    console.log(`The player wins!`)//  declare player the winner
+function getWinner() { // make getWinner function
+  if (computerScore >= 5) {  // if computerScore is 5
+    return `The computer wins!`;  //  declare computer the winner
+  } else if (playerScore >= 5) {  // else if playerScore is 5
+    return `The player wins!`;//  declare player the winner
   } else {  // else nobody has 5 points
-    console.log(`It's a draw.`)  //  declare the winner to be the first to 5 points
+    return `It's a draw.`;  //  declare the winner to be the first to 5 points
+  }
 }
+
+// assign body element to body variable
+
+// create div called container
+
+// create button called rock
+// add text content 'Rock' to rock
+// add eventListener to rock that calls playRound w/ 'rock' as playerSelection when clicked
+// append rock to container
+
+// create button called paper
+// add text content 'Paper' to paper
+// add eventListener to paper that calls playRound w/ 'paper' as playerSelection when clicked
+// append paper to container
+
+// create button called scissors
+// add text content 'Scissors' to scissors
+// add eventListener to scissors that calls playRound w/ 'scissors' as playerSelection when clicked
+// append scissors to container
+
+// append container to body
+
+// create div called scoreBoard
+// make scoreBoard's text content call getScore
+// append scoreBoard to body
+
+// create div called declareWinner
+// make declareWinner call getWinner to get text content
+// append declareWinner to body
