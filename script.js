@@ -103,18 +103,22 @@ const body = document.querySelector('body'); // assign body element to body vari
 
 const container = document.querySelector('#container'); // create div called container
 
-// assign all buttons to buttons variable
-
-// for each button
-// add an event listener for a click
-// that calls playRound with that button's id for playerSelection
-
-body.appendChild(container); // append container to body
-
 const scoreBoard = document.createElement('div'); // create div called scoreBoard
-scoreBoard.textContent = getScore(); // make scoreBoard's text content call getScore
 body.appendChild(scoreBoard); // append scoreBoard to body
 
 const declareWinner = document.createElement('div'); // create div called declareWinner
-declareWinner.textContent = getWinner(); // make declareWinner call getWinner to get text content
 body.appendChild(declareWinner); // append declareWinner to body
+
+scoreBoard.textContent = getScore(); // make scoreBoard's text content call getScore
+declareWinner.textContent = getWinner(); // make declareWinner call getWinner to get text content
+
+const buttons = document.querySelectorAll('button'); // assign all buttons to buttons variable
+
+buttons.forEach((button) => { // for each button
+  button.textContent = button.id;
+  button.addEventListener('click', () => { // add an event listener for a click
+    playRound(button.id, getComputerChoice()); // that calls playRound with that button's id for playerSelection
+    scoreBoard.textContent = getScore(); // make scoreBoard's text content call getScore
+    declareWinner.textContent = getWinner(); // make declareWinner call getWinner to get text content
+  });
+});
