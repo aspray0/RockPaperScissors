@@ -2,7 +2,7 @@
 
 let playerScore = 0;  // declare playerScore @ 0
 let computerScore = 0;  // declare computerScore @ 0
-let scoreString = ``;// declare scoreString
+let result = '';  // declare result variable
 
 // make function getComputerChoice
 function getComputerChoice() {
@@ -30,8 +30,6 @@ function getComputerChoice() {
 
 // make function playRound
 function playRound(playerSelection, computerSelection) {
-
-  let result = '';  // declare result variable
 
   switch (true) { // switch test condition for truthy-ness
     case (playerSelection === computerSelection): // condition playerSelection same as computerSelection
@@ -73,23 +71,25 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-function scoreBoard() {  // make scoreBoard function
+function getScore() {  // make getScore function
+  
+  let scoreString = ``;// declare scoreString
 
   if (result === 'win') {  //  if result is win
     playerScore++;   //    increment playerScore
     scoreString = `Player ${playerScore} : Computer ${computerScore}` //  assign scoreString
-    console.log(scoreString);  //    log scoreString
+    console.log(scoreString);  //    return scoreString
   } else if (result === 'lose') {  //  else if result is lose
     computerScore++;  //    increment computerScore
     scoreString = `Player ${playerScore} : Computer ${computerScore}` //  assign scoreString
-    console.log(scoreString);  //    log scoreString
+    console.log(scoreString);  //    return scoreString
   } else {    //  else result is tie
     scoreString = `Player ${playerScore} : Computer ${computerScore}` //  assign scoreString
-    console.log(scoreString);  //    log scoreString
+    console.log(scoreString);  //    return scoreString
   }
 }
 
-// make declareWinner function
+// make getWinner function
   if (computerScore > playerScore) {  // if computerScore is 5
     console.log(`The computer wins!`)  //  declare computer the winner
   } else if (playerScore > computerScore) {  // else if playerScore is 5
