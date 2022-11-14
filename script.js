@@ -95,35 +95,26 @@ function getWinner() { // make getWinner function
   } else if (playerScore >= 5) {  // else if playerScore is 5
     return `The player wins!`;//  declare player the winner
   } else {  // else nobody has 5 points
-    return `It's a draw.`;  //  declare the winner to be the first to 5 points
+    return `First to 5 points wins!`;  //  declare the winner to be the first to 5 points
   }
 }
 
-// assign body element to body variable
+const body = document.querySelector('body'); // assign body element to body variable
 
-// create div called container
+const container = document.querySelector('#container'); // create div called container
 
-// create button called rock
-// add text content 'Rock' to rock
-// add eventListener to rock that calls playRound w/ 'rock' as playerSelection when clicked
-// append rock to container
+// assign all buttons to buttons variable
 
-// create button called paper
-// add text content 'Paper' to paper
-// add eventListener to paper that calls playRound w/ 'paper' as playerSelection when clicked
-// append paper to container
+// for each button
+// add an event listener for a click
+// that calls playRound with that button's id for playerSelection
 
-// create button called scissors
-// add text content 'Scissors' to scissors
-// add eventListener to scissors that calls playRound w/ 'scissors' as playerSelection when clicked
-// append scissors to container
+body.appendChild(container); // append container to body
 
-// append container to body
+const scoreBoard = document.createElement('div'); // create div called scoreBoard
+scoreBoard.textContent = getScore(); // make scoreBoard's text content call getScore
+body.appendChild(scoreBoard); // append scoreBoard to body
 
-// create div called scoreBoard
-// make scoreBoard's text content call getScore
-// append scoreBoard to body
-
-// create div called declareWinner
-// make declareWinner call getWinner to get text content
-// append declareWinner to body
+const declareWinner = document.createElement('div'); // create div called declareWinner
+declareWinner.textContent = getWinner(); // make declareWinner call getWinner to get text content
+body.appendChild(declareWinner); // append declareWinner to body
